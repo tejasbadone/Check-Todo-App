@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:todoey_flutter/themes.dart';
 
 class TaskTile extends StatelessWidget {
   @override
-  bool isChecked = false;
-  final String taskTitle;
-  final Function checkboxCallback;
-  final Function longPressCallback;
+  bool? isChecked;
+  final String? taskTitle;
+  final Function? checkboxCallback;
+  final Function? longPressCallback;
 
   TaskTile(
       {this.isChecked,
@@ -16,17 +17,17 @@ class TaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onLongPress: longPressCallback,
+      onLongPress: longPressCallback as void Function()?,
       title: Text(
-        taskTitle,
+        taskTitle!,
         style: TextStyle(
-          decoration: isChecked ? TextDecoration.lineThrough : null,
+          decoration: isChecked! ? TextDecoration.lineThrough : null,
         ),
       ),
       trailing: Checkbox(
-        activeColor: Colors.lightBlueAccent,
+        fillColor: Theme.of(context).checkboxTheme.fillColor,
         value: isChecked,
-        onChanged: checkboxCallback,
+        onChanged: checkboxCallback as void Function(bool?)?,
       ),
     );
   }
