@@ -1,7 +1,7 @@
 
 # Check - Todo App
 
-![Logo](https://github.com/tejasbadone/Check-Todo-App/blob/version-1.1/assets/app_icon.png?raw=true)
+![Logo](https://github.com/tejasbadone/Check-Todo-App/blob/main/assets/app_icon.png?raw=true)
 
 With the simple and lightweight todo application built using Flutter, managing tasks and increasing productivity has never been easier. This intuitive and user-friendly app allows you to create and manage todo lists with ease.
 
